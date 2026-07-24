@@ -1,11 +1,315 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="el">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Minimal Page</title>
+    <title>Ηττημένος Υμηττός · Ζώης Ξένος</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            background-color: #faf7f0;
+            color: #1e1b1a;
+            font-family: 'Garamond', 'EB Garamond', 'Times New Roman', serif;
+            line-height: 1.6;
+            padding: 2rem 1.5rem;
+            max-width: 880px;
+            margin: 0 auto;
+        }
+        .poem {
+            font-size: 1.1rem;
+            letter-spacing: 0.01em;
+            margin-bottom: 2.5rem;
+            border-bottom: 1px solid #d6cdc1;
+            padding-bottom: 2rem;
+        }
+        h1 {
+            font-size: 2.2rem;
+            font-weight: 400;
+            letter-spacing: 0.08em;
+            margin-top: 0.2rem;
+            margin-bottom: 0.15rem;
+            font-family: 'Garamond', 'EB Garamond', serif;
+            text-transform: uppercase;
+            border-bottom: 1px solid #c0b3a4;
+            padding-bottom: 0.25rem;
+        }
+        .subhead {
+            font-size: 1rem;
+            font-style: italic;
+            margin-bottom: 1.8rem;
+            color: #4f443c;
+            letter-spacing: 0.02em;
+        }
+        .verse-line {
+            display: block;
+            margin-bottom: 0.15rem;
+            padding-left: 0.2rem;
+        }
+        .indent-1 {
+            padding-left: 2rem;
+        }
+        .indent-2 {
+            padding-left: 4rem;
+        }
+        .indent-3 {
+            padding-left: 6rem;
+        }
+        .indent-4 {
+            padding-left: 8rem;
+        }
+        .indent-5 {
+            padding-left: 10rem;
+        }
+        .centered {
+            text-align: center;
+            margin: 0.5rem 0;
+        }
+        .spacer {
+            margin-top: 0.8rem;
+            margin-bottom: 0.8rem;
+        }
+        .footnote {
+            font-size: 0.85rem;
+            line-height: 1.4;
+            color: #3d3530;
+            background: #f3efe9;
+            padding: 0.6rem 1rem;
+            border-radius: 4px;
+            margin-top: 0.5rem;
+            margin-bottom: 0.8rem;
+            border-left: 3px solid #b7a99a;
+        }
+        .footnote sup {
+            font-size: 0.7rem;
+            margin-right: 0.1rem;
+        }
+        .bio {
+            margin-top: 2.5rem;
+            font-size: 1rem;
+            border-top: 1px solid #d0c5b8;
+            padding-top: 1.8rem;
+            background: #fcf9f5;
+            padding: 1.5rem 1.8rem;
+            border-radius: 6px;
+            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
+        }
+        .bio h2 {
+            font-weight: 400;
+            font-size: 1.3rem;
+            letter-spacing: 0.06em;
+            margin-bottom: 0.5rem;
+            font-family: 'Garamond', 'EB Garamond', serif;
+            text-transform: uppercase;
+            color: #3a312b;
+        }
+        .bio p {
+            margin-bottom: 0.6rem;
+        }
+        .bio i {
+            font-style: italic;
+        }
+        .italic {
+            font-style: italic;
+        }
+        .small-caps {
+            font-variant: small-caps;
+            letter-spacing: 0.04em;
+        }
+        .highlight-greek {
+            font-family: 'Garamond', 'EB Garamond', 'Times New Roman', serif;
+        }
+        .dedication {
+            font-style: italic;
+            margin-top: 0.8rem;
+            color: #4a3f38;
+        }
+        .sig {
+            margin-top: 1.2rem;
+            text-align: right;
+            font-size: 0.95rem;
+            color: #4f443c;
+        }
+        hr {
+            border: none;
+            border-top: 1px solid #d6cdc1;
+            margin: 0.8rem 0;
+        }
+        @media (max-width: 600px) {
+            body {
+                padding: 1.2rem 1rem;
+            }
+            h1 {
+                font-size: 1.8rem;
+            }
+            .poem {
+                font-size: 1rem;
+            }
+            .indent-1 { padding-left: 1.2rem; }
+            .indent-2 { padding-left: 2.2rem; }
+            .indent-3 { padding-left: 3.5rem; }
+            .indent-4 { padding-left: 5rem; }
+            .indent-5 { padding-left: 6.5rem; }
+        }
+    </style>
 </head>
 <body>
-    <h1>Hello, World!</h1>
+    <h1>Ηττημένος Υμηττός</h1>
+    <div class="subhead">[Προς τί ο θρήνος και ο κοπετός]</div>
+
+    <div class="poem">
+
+        <span class="verse-line">Το σάλπισμα μιας άνευ προηγουμένου</span>
+        <span class="verse-line indent-1">ατάκτου υποχωρήσεως</span>
+        <span class="verse-line">του τελευταίου των Αρσακιδών</span>
+        <span class="verse-line indent-1">Αρτάβανου — και της καθεστηκυίας δυναστείας του —</span>
+        <span class="verse-line">απάρεσκα καλείται να αποκρύψει εις το χρονικόν του</span>
+        <span class="verse-line">ο ελληνίζων γραφεύς βήτα Φίλανδρος,</span>
+        <span class="verse-line">μέλος της ολιγομελούς</span>
+        <span class="verse-line">μετά του μεγάλου Βασιλέως κουστωδίας</span>
+        <span class="verse-line indent-2">— σασσανιδικώς ενδεδυμένης,</span>
+        <span class="verse-line indent-2">για την «κάλυψη-απόκρυψη», αντιλαμβάνεσθε —</span>
+        <span class="verse-line">που άρον-άρον απεσπάσθη</span>
+        <span class="verse-line">από τον κύριον όγκον του στρατεύματος,</span>
+        <span class="verse-line">απάνω σε ντουζίνα λιμασμένες βακτριανές.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Όντες απληροφόρητοι προς ώρας</span>
+        <span class="verse-line">οι Ρωμαίοι αγγελιοφόροι</span>
+        <span class="verse-line">περί της παρθικής ανταρσίας,</span>
+        <span class="verse-line">εξόν νωπές είναι οι θύμησες της συντριβής</span>
+        <span class="verse-line">των λεγεώνων υπό της Περσίας,</span>
+        <span class="verse-line">τοσαύτη η κατισχυμένη ακολουθία</span>
+        <span class="verse-line indent-2">— αντί της Κτησιφώντος<sup>1</sup> —</span>
+        <span class="verse-line">βαίνει παραδόξως προς δυσμάς,</span>
+        <span class="verse-line">αιτούμενη ασύλου από την βαθμηδόν</span>
+        <span class="verse-line">σκαιοτέραν κτήσιν του Αλεξάνδρου,</span>
+        <span class="verse-line">του τελευταίου [και καταϊδρωμένου] των Σεβήρων,</span>
+        <span class="verse-line">Πόλιν των Αθηνών.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Mε χωλόν βηματισμόν ο Βασιλεύς</span>
+        <span class="verse-line">αρνείται την εθιμοτυπικήν πορείαν</span>
+        <span class="verse-line">προς όρος Αιγάλεω,</span>
+        <span class="verse-line">προστάζων δε την εκτροπήν αύτης προς Υμηττόν,</span>
+        <span class="verse-line">εμβρόντητους αφήνων</span>
+        <span class="verse-line">τους της πομπής μετέχοντας.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Από ψηλά, τα σπίτια του αρχέγονου εχθρού</span>
+        <span class="verse-line">μοιάζουν με μαυσωλείο, με τάφους περιωπής·</span>
+        <span class="verse-line">μια περιουσία θρυλική,</span>
+        <span class="verse-line">που λόγω αλλεπάλληλων</span>
+        <span class="verse-line">φόρων κληρονομίας,</span>
+        <span class="verse-line">με νύχια και με δόντια συγκρατιέται.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Με ρέμβη στα μάτια</span>
+        <span class="verse-line indent-1">[που σε λίγο θα πλυθούν]</span>
+        <span class="verse-line">και με δεήσεις ακατάληπτες</span>
+        <span class="verse-line">προς τον Φαρβαχάρ<sup>2</sup> και τον Ναμπού</span>
+        <span class="verse-line indent-2">[τον ξεχασμένο γιό του Μαρδούκ<sup>3</sup>]</span>
+        <span class="verse-line">ο νους του ηττημένου <span class="italic">α ν ε μ ο π ο ρ ε ί</span>·</span>
+        <span class="verse-line">γίνεται έξαφνα μάρτυρας σεισμού,</span>
+        <span class="verse-line">μιας πόλης που τρεκλίζει.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Ανήμπορος ο βασιλεύς</span>
+        <span class="verse-line">να σώσει το άστυ (το κλεινόν) απ' το κακό,</span>
+        <span class="verse-line">μα μόνο το τομάρι του —</span>
+        <span class="verse-line indent-3">άραγε, για πόσο ακόμα;</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Μια νέα Σαλαμίνα ζει,</span>
+        <span class="verse-line">μια θαλερή πνοή αποζητεί·</span>
+        <span class="verse-line">να λυτρωθεί στα έσχατα, ευελπιστεί.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Κατά κύματα στα αυτιά του αντηχεί</span>
+        <span class="verse-line">η επωδός μιας θρηνωδίας</span>
+        <span class="verse-line">από τα στοιχημένα καταστρώματα·</span>
+        <span class="verse-line">του πόνου οι ιαχές και του θυμού</span>
+        <span class="verse-line indent-2">κύμβαλα βουβά</span>
+        <span class="verse-line indent-4">της Ήττας διατρυπούν.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Στρέφει το βλέμμα προς το Αιγάλεω</span>
+        <span class="verse-line">τιμά τον Ξέρξη τον προκάτοχο,</span>
+        <span class="verse-line">τον χαιρετά στρατιωτικά</span>
+        <span class="verse-line">και στην συνέχεια επιστρατεύει</span>
+        <span class="verse-line">τα σπαστά του ελληνικά.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Τον νόθο γιό μιας σκλάβας συναντά·</span>
+        <span class="verse-line">ναι, καλά θυμάστε,</span>
+        <span class="verse-line">αυτόν που σκάρωσε το Τέχνασμα<sup>4</sup></span>
+        <span class="verse-line">και ύστερα αυτομόλησε.</span>
+        <span class="verse-line">Να τον ρωτά:</span>
+        <span class="verse-line indent-2"><span class="italic">Σκλάβος εγώ, σκλάβος εσύ.</span></span>
+        <span class="verse-line indent-2"><span class="italic">Ποιον πόνο να αντέξω</span></span>
+        <span class="verse-line indent-4"><span class="italic">στο σώμα, την ψυχή;</span></span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Απόκριση καθάρια</span>
+        <span class="verse-line">δεν επήρε, παρά μόνο ένα ξερό:</span>
+        <span class="verse-line indent-3">«<span class="italic">ουαί τοις ηττημένοις</span><sup>5</sup> και νεκροίς».</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Ποιος το περίμενε,</span>
+        <span class="verse-line">οι Πάρθες στην Αθήνα·</span>
+        <span class="verse-line">να τοι, με κομμένη</span>
+        <span class="verse-line">αλεξανδρίζουσα περπατησιά,</span>
+        <span class="verse-line">πιάνουν το γόνυ σας,</span>
+        <span class="verse-line">ω άνδρες Αθηναίοι παρηκμασμένοι.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Οι Πάρθες...</span>
+        <span class="verse-line">Τί κι αν τα δώρα των Σελευκιδών τιμήσαν;</span>
+        <span class="verse-line">Τι κι αν κοτζάμ Ρωμαίους σταματήσαν;</span>
+        <span class="verse-line">Το σέβας ολονών, λειψό το πήραν</span>
+        <span class="verse-line">μα πάντοτ' είχαν αναπεπταμένα</span>
+        <span class="verse-line">τα αυτοκρατορικά τους λάβαρα,</span>
+        <span class="verse-line">όσες φορές κι αν σκλαβωθήκαν,</span>
+        <span class="verse-line">με αντάλλαγμα, όμως, <span class="italic">τ ι</span> ;</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line indent-1"><span class="italic">Ω θ ε έ, ω Ή λ ι ε</span></span>
+        <span class="verse-line indent-1">— είπεν ο Αρτάβανος με μια φωνή —</span>
+        <span class="verse-line">ένα να ξέρεις,</span>
+        <span class="verse-line">πως <span class="italic">δ ε ν</span> θα ζήσουμε μαζί.</span>
+        <span class="verse-line">Πριν από σένα, <span class="italic">ε γ ώ</span> θα χαιρετήσω·</span>
+        <span class="verse-line">κι εσύ, <span class="italic">π ο λ ύ</span> μετά από μένα.</span>
+        <span class="verse-line">Δεν θα' μαι στην κηδεία σου</span>
+        <span class="verse-line">εσύ όμως στη δικιά μου θα 'σαι·</span>
+        <span class="verse-line">κάπως, την κάθοδό μου να φωτίζεις.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Ήλιε του απομεσήμερου,</span>
+        <span class="verse-line">κατάματα σε κοίταξα και σου είπα:</span>
+        <span class="verse-line indent-2">Απόψε, θα δύσουμε <span class="italic">μ α ζ ί</span>.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line">Ουδένα χάλκεον χέρι φόβου αισθάνομαι,</span>
+        <span class="verse-line">πάρθιον βέλος να στρέφει προς εμέ.</span>
+        <span class="verse-line spacer"></span>
+        <span class="verse-line indent-5">[⋯κι ο Φίλανδρος πριχού τελεία να βάλει,</span>
+        <span class="verse-line indent-5">σφυρί-καλέμι έξαφνα πετά, για να προλάβει:</span>
+        <span class="verse-line indent-5"><span class="italic">Β ι α ζ ό μ α σ τ ε, μ έ γ α Β α σ ι λ έ α, ό χ ι.</span>]</span>
+
+        <!-- υποσημειώσεις ενσωματωμένες -->
+        <div class="footnote">
+            <sup>1</sup> Ιδρυθείσα κατά την ελληνιστική εποχή, η Κτησιφών ήταν πόλη στην καρδιά της αρχαίας Βαβυλώνας, που για μια ολόκληρη χιλιετία υπήρξε η διάσημη πρωτεύουσα του παρθικού βασιλείου των Αρσακιδών και της Περσικής Αυτοκρατορίας των Σασσανιδών.
+        </div>
+        <div class="footnote">
+            <sup>2</sup> ο καλός άγγελος του Ζωροαστρισμού
+        </div>
+        <div class="footnote">
+            <sup>3</sup> Ο Μαρδούκ, ή Μερωδάχ ήταν ο ύπατος θεός της Βαβυλώνας προερχόμενος από το πανάρχαιο σουμεριακό πάνθεο
+        </div>
+        <div class="footnote">
+            <sup>4</sup> ενν. ο Θεμιστοκλής
+        </div>
+        <div class="footnote">
+            <sup>5</sup> Η φράση «οὐαὶ τοῖς ἡττημένοις», (στη νεοελληνική: αλίμονο στους νικημένους), είναι μια ιστορική λατινογενής φράση που, κατά τον Τίτο Λίβιο (V, 48), λέχθηκε το 390 π.Χ. από τον αρχηγό των Γαλατών Βρέννο, τη στιγμή που, μετά από αντιρρήσεις των Ρωμαίων για το σωστό βάρος χρυσού που θα καταβαλλόταν ως λύτρα για την αποχώρηση των Γαλατών από τη Ρώμη, έριξε το ξίφος και τη ζώνη του πάνω στη ζυγαριά των δικών του σταθμών, αναφωνώντας <strong>Vae victis</strong>
+        </div>
+    </div>
+
+    <div class="bio">
+        <h2>Σύντομο βιογραφικό σημείωμα</h2>
+        <p>Με καταγωγή από την Θεσσαλονίκη, ο Ζώης Ξένος μένει στην Αθήνα για χρόνια ουκ έστιν αριθμός. Δηλώνει <i>sui generis</i>, ως μέρος του πρώτου κύματος των millennials, παρότι υπάρχουν συγκυρίες που ακολουθεί συγκεκριμένα ρεύματα, υπόγεια και μη. Έχει εκδώσει μία ποιητική συλλογή («Τανγκανίκα — Πενήντα και ένα ποιήματα για τον πατέρα μου», Εκδ. Οδός Πανός), ενώ κείμενα και κριτικές του βρίσκονται αναρτημένες στο διαδίκτυο.</p>
+        <div class="sig">— Ζ.Ξ.</div>
+    </div>
+
+    <div style="margin-top: 2rem; font-size: 0.85rem; color: #6b5f55; border-top: 1px solid #ddd6cc; padding-top: 0.8rem; text-align: center;">
+        <span class="small-caps">Ηττημένος Υμηττός</span> · απόσπασμα · Ζώης Ξένος
+    </div>
 </body>
 </html>
