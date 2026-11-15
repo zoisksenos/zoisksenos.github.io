@@ -1,317 +1,691 @@
 <!DOCTYPE html>
 <html lang="el">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Ηττημένος Υμηττός · Ζώης Ξένος</title>
-    <style>
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-        body {
-            background-color: #faf7f0;
-            color: #1e1b1a;
-            font-family: 'Garamond', 'EB Garamond', 'Times New Roman', serif;
-            line-height: 1.6;
-            padding: 2rem 1.5rem;
-            max-width: 880px;
-            margin: 0 auto;
-        }
-        .poem {
-            font-size: 1.1rem;
-            letter-spacing: 0.01em;
-            margin-bottom: 2.5rem;
-            border-bottom: 1px solid #d6cdc1;
-            padding-bottom: 2rem;
-        }
-        h1 {
-            font-size: 2.2rem;
-            font-weight: 400;
-            letter-spacing: 0.08em;
-            margin-top: 0.2rem;
-            margin-bottom: 0.15rem;
-            font-family: 'Garamond', 'EB Garamond', serif;
-            text-transform: uppercase;
-            border-bottom: 1px solid #c0b3a4;
-            padding-bottom: 0.25rem;
-        }
-        .subhead {
-            font-size: 1rem;
-            font-style: italic;
-            margin-bottom: 1.8rem;
-            color: #4f443c;
-            letter-spacing: 0.02em;
-        }
-        .verse-line {
-            display: block;
-            margin-bottom: 0.15rem;
-            padding-left: 0.2rem;
-        }
-        .indent-1 {
-            padding-left: 2rem;
-        }
-        .indent-2 {
-            padding-left: 4rem;
-        }
-        .indent-3 {
-            padding-left: 6rem;
-        }
-        .indent-4 {
-            padding-left: 8rem;
-        }
-        .indent-5 {
-            padding-left: 10rem;
-        }
-        .centered {
-            text-align: center;
-            margin: 0.5rem 0;
-        }
-        .spacer {
-            margin-top: 0.8rem;
-            margin-bottom: 0.8rem;
-        }
-        .footnote {
-            font-size: 0.85rem;
-            line-height: 1.4;
-            color: #3d3530;
-            background: #f3efe9;
-            padding: 0.6rem 1rem;
-            border-radius: 4px;
-            margin-top: 0.5rem;
-            margin-bottom: 0.8rem;
-            border-left: 3px solid #b7a99a;
-        }
-        .footnote sup {
-            font-size: 0.7rem;
-            margin-right: 0.1rem;
-        }
-        .bio {
-            margin-top: 2.5rem;
-            font-size: 1rem;
-            border-top: 1px solid #d0c5b8;
-            padding-top: 1.8rem;
-            background: #fcf9f5;
-            padding: 1.5rem 1.8rem;
-            border-radius: 6px;
-            box-shadow: 0 2px 6px rgba(0,0,0,0.02);
-        }
-        .bio h2 {
-            font-weight: 400;
-            font-size: 1.3rem;
-            letter-spacing: 0.06em;
-            margin-bottom: 0.5rem;
-            font-family: 'Garamond', 'EB Garamond', serif;
-            text-transform: uppercase;
-            color: #3a312b;
-        }
-        .bio p {
-            margin-bottom: 0.6rem;
-        }
-        .bio i {
-            font-style: italic;
-        }
-        .italic {
-            font-style: italic;
-        }
-        .small-caps {
-            font-variant: small-caps;
-            letter-spacing: 0.04em;
-        }
-        .highlight-greek {
-            font-family: 'Garamond', 'EB Garamond', 'Times New Roman', serif;
-        }
-        .dedication {
-            font-style: italic;
-            margin-top: 0.8rem;
-            color: #4a3f38;
-        }
-        .sig {
-            margin-top: 1.2rem;
-            text-align: right;
-            font-size: 0.95rem;
-            color: #4f443c;
-        }
-        hr {
-            border: none;
-            border-top: 1px solid #d6cdc1;
-            margin: 0.8rem 0;
-        }
-        @media (max-width: 600px) {
-            body {
-                padding: 1.2rem 1rem;
-            }
-            h1 {
-                font-size: 1.8rem;
-            }
-            .poem {
-                font-size: 1rem;
-            }
-            .indent-1 { padding-left: 1.2rem; }
-            .indent-2 { padding-left: 2.2rem; }
-            .indent-3 { padding-left: 3.5rem; }
-            .indent-4 { padding-left: 5rem; }
-            .indent-5 { padding-left: 6.5rem; }
-        }
-    </style>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="color-scheme" content="light dark">
+<title>Ηττημένος Υμηττός · Ζώης Ξένος</title>
+<meta name="description" content="«Ηττημένος Υμηττός» — ποίημα του Ζώη Ξένου. Με υποσημειώσεις και σύντομο βιογραφικό σημείωμα.">
+<meta name="author" content="Ζώης Ξένος">
+<meta property="og:type" content="article">
+<meta property="og:locale" content="el_GR">
+<meta property="og:title" content="Ηττημένος Υμηττός · Ζώης Ξένος">
+<meta property="og:description" content="Ποίημα του Ζώη Ξένου, με υποσημειώσεις και βιογραφικό σημείωμα.">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='10' fill='%231f1b17'/%3E%3Ctext x='32' y='46' font-family='Georgia,serif' font-size='38' fill='%23f7f2e7' text-anchor='middle'%3E%CE%9E%3C/text%3E%3C/svg%3E">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400;0,500;0,600;1,400;1,500&family=GFS+Didot&display=swap" rel="stylesheet">
+<script>
+  /* Θέμα πριν το πρώτο ζωγραφικό καρέ, ώστε να μην υπάρχει αναλαμπή. */
+  (function () {
+    var saved = null;
+    try { saved = localStorage.getItem('theme'); } catch (e) {}
+    var dark = saved ? saved === 'dark' : window.matchMedia('(prefers-color-scheme: dark)').matches;
+    var root = document.documentElement;
+    root.setAttribute('data-theme', dark ? 'dark' : 'light');
+    root.style.colorScheme = dark ? 'dark' : 'light';
+  })();
+</script>
+<style>
+  /* ---------- Παλέτα & μεταβλητές ---------- */
+  :root {
+    --font-text: "EB Garamond", "Gentium Book Plus", "Palatino Linotype", "Book Antiqua", Georgia, "Times New Roman", serif;
+    --font-display: "GFS Didot", var(--font-text);
+
+    --paper: #faf6ec;
+    --paper-edge: #e9dfcd;
+    --ink: #211c17;
+    --ink-2: #4a4138;
+    --ink-3: #796b5a;
+    --rule: #d8cbb5;
+    --rule-strong: #b9a98f;
+    --accent: #8d4529;
+    --target-bg: #f3e7d3;
+
+    --measure: 38rem;
+    --indent-step: clamp(0.7rem, 2.6vw, 1.7rem);
+    color-scheme: light;
+  }
+
+  :root[data-theme="dark"] {
+    --paper: #191510;
+    --paper-edge: #0e0b08;
+    --ink: #eae2d2;
+    --ink-2: #c6baa7;
+    --ink-3: #9a8d7b;
+    --rule: #3a3227;
+    --rule-strong: #584c3c;
+    --accent: #d99a76;
+    --target-bg: #2b241a;
+    color-scheme: dark;
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+
+  html {
+    scroll-behavior: smooth;
+    -webkit-text-size-adjust: 100%;
+  }
+
+  body {
+    margin: 0;
+    padding: clamp(1rem, 4vw, 3.5rem) clamp(0.85rem, 4vw, 2rem);
+    font-family: var(--font-text);
+    font-size: clamp(1.02rem, 0.96rem + 0.3vw, 1.16rem);
+    line-height: 1.65;
+    color: var(--ink);
+    background-color: var(--paper-edge);
+    background-image:
+      radial-gradient(70rem 45rem at 50% -12%, rgba(255, 255, 255, 0.55), transparent 70%),
+      radial-gradient(50rem 40rem at 100% 108%, rgba(150, 124, 84, 0.18), transparent 70%);
+    background-attachment: fixed;
+    -webkit-font-smoothing: antialiased;
+    text-rendering: optimizeLegibility;
+    font-kerning: normal;
+    font-variant-ligatures: common-ligatures;
+  }
+
+  :root[data-theme="dark"] body {
+    background-image:
+      radial-gradient(70rem 45rem at 50% -12%, rgba(255, 240, 205, 0.06), transparent 70%),
+      radial-gradient(50rem 40rem at 100% 108%, rgba(120, 80, 40, 0.18), transparent 70%);
+  }
+
+  ::selection { background: #e8d5b8; color: #211c17; }
+
+  a {
+    color: inherit;
+    text-decoration-color: var(--rule-strong);
+    text-underline-offset: 0.18em;
+  }
+  a:focus-visible,
+  button:focus-visible {
+    outline: 2px solid var(--accent);
+    outline-offset: 3px;
+    border-radius: 2px;
+  }
+
+  /* ---------- Σελίδα ---------- */
+  .page {
+    position: relative;
+    max-width: 48rem;
+    margin: 0 auto;
+    padding: clamp(1.5rem, 5vw, 3.6rem) clamp(1.2rem, 5.5vw, 4.2rem) clamp(1.6rem, 4vw, 2.6rem);
+    background: var(--paper);
+    border: 1px solid var(--rule);
+    border-radius: 3px;
+    box-shadow:
+      0 30px 70px -42px rgba(58, 42, 24, 0.65),
+      0 1px 0 rgba(255, 255, 255, 0.55) inset;
+  }
+
+  :root[data-theme="dark"] .page {
+    box-shadow:
+      0 30px 70px -42px rgba(0, 0, 0, 0.9),
+      0 1px 0 rgba(255, 240, 210, 0.04) inset;
+  }
+
+  /* ---------- Διακόπτης θέματος ---------- */
+  .theme-toggle {
+    position: absolute;
+    top: 0.7rem;
+    right: 0.7rem;
+    display: grid;
+    place-items: center;
+    width: 2.2rem;
+    height: 2.2rem;
+    padding: 0;
+    color: var(--ink-3);
+    background: transparent;
+    border: 1px solid transparent;
+    border-radius: 50%;
+    cursor: pointer;
+    opacity: 0.6;
+    transition: opacity 0.2s ease, color 0.2s ease, border-color 0.2s ease, transform 0.2s ease;
+  }
+  .theme-toggle:hover {
+    opacity: 1;
+    color: var(--ink);
+    border-color: var(--rule);
+  }
+  .theme-toggle:active { transform: scale(0.94); }
+  .theme-toggle svg {
+    width: 1.05rem;
+    height: 1.05rem;
+    fill: none;
+    stroke: currentColor;
+    stroke-width: 1.4;
+    stroke-linecap: round;
+    stroke-linejoin: round;
+  }
+  .theme-toggle .icon-sun { display: none; }
+  :root[data-theme="dark"] .theme-toggle .icon-sun { display: block; }
+  :root[data-theme="dark"] .theme-toggle .icon-moon { display: none; }
+
+  /* ---------- Κεφαλίδα ---------- */
+  .masthead {
+    text-align: center;
+    margin-bottom: clamp(2rem, 5vw, 3rem);
+  }
+
+  .author {
+    margin: 0 0 1.1rem;
+    font-family: var(--font-display);
+    font-size: 0.78rem;
+    letter-spacing: 0.34em;
+    text-indent: 0.34em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+  }
+
+  h1 {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: clamp(1.55rem, 1.05rem + 2.4vw, 2.7rem);
+    font-weight: 400;
+    line-height: 1.16;
+    letter-spacing: 0.13em;
+    text-indent: 0.13em;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  .subhead {
+    margin: 0.9rem 0 0;
+    font-size: 0.98rem;
+    font-style: italic;
+    letter-spacing: 0.02em;
+    color: var(--ink-2);
+    text-wrap: balance;
+  }
+
+  .rule-orn {
+    display: block;
+    width: clamp(9rem, 34vw, 11rem);
+    height: auto;
+    margin: clamp(1.4rem, 3.5vw, 1.9rem) auto 0;
+    color: var(--rule-strong);
+  }
+
+  /* ---------- Ποίημα ---------- */
+  .poem {
+    max-width: var(--measure);
+    margin: 0 auto;
+    font-size: clamp(1.02rem, 0.97rem + 0.26vw, 1.15rem);
+    line-height: 1.62;
+  }
+
+  .stanza {
+    margin: 0 0 1.7rem;
+  }
+  .stanza:last-of-type { margin-bottom: 0; }
+
+  .line {
+    display: block;
+    padding-left: calc(var(--i, 0) * var(--indent-step));
+  }
+
+  em, .italic { font-style: italic; }
+
+  /* Αραιωμένη έμφαση: αντί για κενά διαστήματα, σωστό letter-spacing */
+  .track {
+    font-style: italic;
+    letter-spacing: 0.3em;
+    margin-right: -0.3em;
+  }
+
+  /* Κλείσιμο ποιήματος, ελαφρώς δεξιά */
+  .coda {
+    max-width: 33rem;
+    margin: 2.3rem 0 0 auto;
+    padding: 0;
+    font-size: 0.95em;
+    font-style: italic;
+    color: var(--ink-2);
+  }
+  .coda .line + .line { margin-top: 0.1rem; }
+  .coda .track { letter-spacing: 0.14em; margin-right: -0.14em; }
+
+  /* ---------- Υποσημειώσεις ---------- */
+  .fn {
+    line-height: 0;
+    font-size: 0.62em;
+    vertical-align: super;
+  }
+  .fn a {
+    color: var(--accent);
+    text-decoration: none;
+    padding: 0 0.12em;
+    font-variant-numeric: lining-nums;
+  }
+  .fn a:hover { text-decoration: underline; }
+
+  .notes {
+    max-width: var(--measure);
+    margin: clamp(2.4rem, 6vw, 3.4rem) auto 0;
+    padding-top: 1.5rem;
+    border-top: 1px solid var(--rule);
+  }
+
+  .notes-title {
+    margin: 0 0 1rem;
+    font-family: var(--font-display);
+    font-size: 0.74rem;
+    font-weight: 400;
+    letter-spacing: 0.24em;
+    text-transform: uppercase;
+    color: var(--ink-3);
+    text-wrap: balance;
+  }
+
+  .notes-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+    display: grid;
+    gap: 0.75rem;
+  }
+
+  .notes-list li {
+    position: relative;
+    padding: 0.15rem 0.5rem 0.15rem 1.7rem;
+    margin-left: -0.5rem;
+    font-size: 0.86rem;
+    line-height: 1.55;
+    color: var(--ink-2);
+    scroll-margin-top: 1.5rem;
+    border-radius: 3px;
+  }
+
+  .notes-list li:target {
+    background: var(--target-bg);
+  }
+
+  .notes-list .num {
+    position: absolute;
+    left: 0.5rem;
+    top: 0.42em;
+    font-size: 0.72rem;
+    color: var(--accent);
+    font-variant-numeric: lining-nums;
+  }
+
+  .notes-list .back {
+    margin-left: 0.15em;
+    color: var(--ink-3);
+    text-decoration: none;
+    opacity: 0.45;
+    transition: opacity 0.15s ease;
+  }
+  .notes-list .back:hover,
+  .notes-list .back:focus-visible { opacity: 1; }
+
+  /* ---------- Βιογραφικό ---------- */
+  .bio {
+    max-width: var(--measure);
+    margin: clamp(2.8rem, 7vw, 4rem) auto 0;
+    padding: clamp(1.2rem, 3.5vw, 1.8rem) clamp(1.1rem, 3.5vw, 1.9rem);
+    background: var(--paper);
+    background: linear-gradient(180deg, color-mix(in srgb, var(--paper) 60%, #fff 40%), var(--paper));
+    border: 1px solid var(--rule);
+    border-radius: 4px;
+    font-size: 0.95rem;
+    color: var(--ink-2);
+    break-inside: avoid;
+  }
+
+  :root[data-theme="dark"] .bio {
+    background: linear-gradient(180deg, #1f1a13, var(--paper));
+  }
+
+  .bio h2 {
+    margin: 0.15rem 0 0.8rem;
+    font-family: var(--font-display);
+    font-size: 1.04rem;
+    font-weight: 400;
+    letter-spacing: 0.14em;
+    text-transform: uppercase;
+    color: var(--ink);
+    text-wrap: balance;
+  }
+
+  .bio .kicker {
+    margin: 0;
+    font-family: var(--font-display);
+    font-size: 0.7rem;
+    letter-spacing: 0.26em;
+    text-transform: uppercase;
+    color: var(--accent);
+  }
+
+  .bio p { margin: 0 0 0.75rem; }
+  .bio p:last-child { margin-bottom: 0; }
+  .bio cite { font-style: italic; }
+
+  .sig {
+    margin-top: 1rem;
+    text-align: right;
+    font-style: italic;
+    color: var(--ink-3);
+  }
+
+  /* ---------- Κολοφώνας ---------- */
+  .colophon {
+    max-width: var(--measure);
+    margin: clamp(2rem, 5vw, 3rem) auto 0;
+    padding-top: 1.1rem;
+    border-top: 1px solid var(--rule);
+    text-align: center;
+    font-size: 0.74rem;
+    letter-spacing: 0.16em;
+    color: var(--ink-3);
+  }
+  .colophon .small-caps {
+    font-variant-caps: all-small-caps;
+    letter-spacing: 0.2em;
+  }
+
+  /* ---------- Κίνηση ---------- */
+  @media (prefers-reduced-motion: no-preference) {
+    .page {
+      animation: rise 0.7s cubic-bezier(0.2, 0.7, 0.2, 1) both;
+    }
+    @keyframes rise {
+      from { opacity: 0; transform: translateY(10px); }
+      to   { opacity: 1; transform: none; }
+    }
+  }
+
+  @media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    .theme-toggle { transition: none; }
+  }
+
+  /* ---------- Μικρές οθόνες ---------- */
+  @media (max-width: 540px) {
+    .author { letter-spacing: 0.26em; text-indent: 0.26em; }
+    h1 { letter-spacing: 0.1em; text-indent: 0.1em; }
+    .track { letter-spacing: 0.2em; margin-right: -0.2em; }
+    .coda .track { letter-spacing: 0.06em; margin-right: -0.06em; }
+    .notes-list li { font-size: 0.83rem; }
+    .colophon { letter-spacing: 0.1em; }
+  }
+
+  /* ---------- Εκτύπωση ---------- */
+  @media print {
+    :root,
+    :root[data-theme="dark"] {
+      --paper: #fff;
+      --paper-edge: #fff;
+      --ink: #000;
+      --ink-2: #1a1a1a;
+      --ink-3: #333;
+      --rule: #bbb;
+      --rule-strong: #999;
+      --accent: #000;
+      --target-bg: transparent;
+    }
+    body {
+      background: #fff;
+      color: #000;
+      padding: 0;
+      font-size: 11.5pt;
+    }
+    .page {
+      max-width: none;
+      padding: 0;
+      border: 0;
+      box-shadow: none;
+    }
+    .theme-toggle { display: none; }
+    .notes-list li:target { background: none; }
+    .back { display: none; }
+    .notes, .bio { break-inside: avoid; }
+    .stanza { break-inside: avoid; }
+    a { text-decoration: none; }
+  }
+</style>
 </head>
 <body>
-    <h1>Ηττημένος Υμηττός</h1>
-    <div class="subhead">[Προς τι ο θρήνος και ο κοπετός;]</div>
 
-    <div class="poem">
+<main class="page">
 
-        <span class="verse-line">Το σάλπισμα μιας άνευ προηγουμένου</span>
-        <span class="verse-line indent-1">ατάκτου υποχωρήσεως</span>
-        <span class="verse-line">του τελευταίου των Αρσακιδών,</span>
-        <span class="verse-line indent-1">Αρτάβανου — και της καθεστηκυίας δυναστείας του —</span>
-        <span class="verse-line">απάρεσκα καλείται να αποκρύψει εις το χρονικόν του</span>
-        <span class="verse-line">ο ελληνίζων γραφεύς βήτα Φίλανδρος,</span>
-        <span class="verse-line">μέλος της ολιγομελούς</span>
-        <span class="verse-line">μετά του μεγάλου Βασιλέως κουστωδίας</span>
-        <span class="verse-line indent-2">— σασσανιδικώς ενδεδυμένης</span>
-        <span class="verse-line indent-2">για την «κάλυψη-απόκρυψη», αντιλαμβάνεσθε —</span>
-        <span class="verse-line">που άρον-άρον απεσπάσθη</span>
-        <span class="verse-line">από τον κύριον όγκον του στρατεύματος,</span>
-        <span class="verse-line">απάνω σε ντουζίνα λιμασμένες βακτριανές.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Όντες απληροφόρητοι προς ώρας</span>
-        <span class="verse-line">οι Ρωμαίοι αγγελιοφόροι</span>
-        <span class="verse-line">περί της παρθικής ανταρσίας,</span>
-        <span class="verse-line">εξόν νωπές είναι ακόμα</span>
-        <span class="verse-line">οι θύμησες της συντριβής</span>
-        <span class="verse-line">των λεγεώνων υπό της Περσίας,</span>
-        <span class="verse-line">τοσαύτη η κατισχυμένη ακολουθία</span>
-        <span class="verse-line indent-2">— αντί της Κτησιφώντος<sup>1</sup> —</span>
-        <span class="verse-line">βαίνει παραδόξως προς δυσμάς,</span>
-        <span class="verse-line">αιτούσα ασύλου από την βαθμηδόν</span>
-        <span class="verse-line">σκαιοτέραν κτήσιν του Αλεξάνδρου,</span>
-        <span class="verse-line">του τελευταίου [και καταϊδρωμένου] των Σεβήρων,</span>
-        <span class="verse-line">Πόλιν των Αθηνών.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Mε χωλόν βηματισμόν ο Βασιλεύς</span>
-        <span class="verse-line">αρνείται την εθιμοτυπικήν πορείαν</span>
-        <span class="verse-line">προς όρος Αιγάλεω,</span>
-        <span class="verse-line">προστάζων δε την εκτροπήν αύτης προς Υμηττόν,</span>
-        <span class="verse-line">εμβρόντητους αφήνων</span>
-        <span class="verse-line">τους της πομπής μετέχοντας.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Από ψηλά, τα σπίτια του αρχέγονου εχθρού</span>
-        <span class="verse-line">θυμίζουν μαυσωλείο, με τάφους περιωπής·</span>
-        <span class="verse-line">μια περιουσία θρυλική,</span>
-        <span class="verse-line">που λόγω αλλεπάλληλων</span>
-        <span class="verse-line">φόρων κληρονομίας,</span>
-        <span class="verse-line">με νύχια και με δόντια συγκρατιέται.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Με ρέμβη στα μάτια</span>
-        <span class="verse-line indent-1">[που σε λίγο θα πλυθούν]</span>
-        <span class="verse-line">και με δεήσεις ακατάληπτες</span>
-        <span class="verse-line">προς τον Φαρβαχάρ<sup>2</sup> και τον Ναμπού</span>
-        <span class="verse-line indent-2">[τον ξεχασμένο γιό του Μαρδούκ<sup>3</sup>]</span>
-        <span class="verse-line">ο νους του ηττημένου <span class="italic">α ν ε μ ο π ο ρ ε ί</span>·</span>
-        <span class="verse-line">γίνεται έξαφνα μάρτυρας σεισμού,</span>
-        <span class="verse-line">μιας πόλης που τρεκλίζει.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Ανήμπορος ο Αρτάβανος</span>
-        <span class="verse-line">να σώσει το άστυ (το κλεινόν) απ' το κακό,</span>
-        <span class="verse-line">μα μόνο το τομάρι του —</span>
-        <span class="verse-line indent-3">άραγε, για πόσο ακόμα;</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Μια νέα Σαλαμίνα ζει,</span>
-        <span class="verse-line">μια θαλερή πνοή αποζητεί·</span>
-        <span class="verse-line">να λυτρωθεί στα έσχατα, ευελπιστεί.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Από της Ναυμαχίας</span>
-        <span class="verse-line">τα στοιχημένα καταστρώματα,</span>
-        <span class="verse-line">η επωδός μιας θρηνωδίας</span>
-        <span class="verse-line">ακόμα αντηχεί·</span>
-        <span class="verse-line">του πόνου οι ιαχές και του θυμού</span>
-        <span class="verse-line indent-2">κύμβαλα βουβά</span>
-        <span class="verse-line indent-4">της Ήττας διατρυπούν.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Στρέφει το βλέμμα προς το θρόνο, το Αιγάλεω·</span>
-        <span class="verse-line">τιμά τον Ξέρξη τον προκάτοχο,</span>
-        <span class="verse-line">τον χαιρετά στρατιωτικά</span>
-        <span class="verse-line">και στην συνέχεια επιστρατεύει</span>
-        <span class="verse-line">τα σπαστά του ελληνικά.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Το νόθο γιό μιας σκλάβας συναντά·</span>
-        <span class="verse-line">ναι, καλά θυμάστε,</span>
-        <span class="verse-line">αυτόν που σκάρωσε το Τέχνασμα<sup>4</sup></span>
-        <span class="verse-line">και ύστερα αυτομόλησε.</span>
-        <span class="verse-line">Να τον ρωτά:</span>
-        <span class="verse-line indent-2"><span class="italic">Σκλάβος εγώ, σκλάβος εσύ.</span></span>
-        <span class="verse-line indent-2"><span class="italic">Ποιον πόνο να αντέξω;</span></span>
-        <span class="verse-line indent-4"><span class="italic">Στο σώμα, στην ψυχή;</span></span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Απόκριση καθάρια</span>
-        <span class="verse-line">δεν επήρε, μονάχα ένα ξερό:</span>
-        <span class="verse-line indent-3">«<span class="italic">ουαί τοις ηττημένοις</span><sup>5</sup> και νεκροίς».</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Ποιος το περίμενε·</span>
-        <span class="verse-line">οι Πάρθες, Αθηναίοι σε μια μέρα!</span>
-        <span class="verse-line">Να τοι, με κομμένη</span>
-        <span class="verse-line">αλεξανδρίζουσα περπατησιά,</span>
-        <span class="verse-line">πιάνουν το γόνυ σας,</span>
-        <span class="verse-line">ω άνδρες Αθηναίοι-παρηκμασμένοι.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Οι Πάρθες...</span>
-        <span class="verse-line">Τί κι αν τα δώρα των Σελευκιδών τιμήσαν;</span>
-        <span class="verse-line">Τί κι αν κοτζάμ Ρωμαίους σταματήσαν;</span>
-        <span class="verse-line">Το σέβας ολονών, λειψό το πήραν·</span>
-        <span class="verse-line">μα πάντοτ' είχαν αναπεπταμένα</span>
-        <span class="verse-line">τα αυτοκρατορικά τους λάβαρα,</span>
-        <span class="verse-line">όσες φορές κι αν σκλαβωθήκαν,</span>
-        <span class="verse-line">με αντάλλαγμα, όμως, <span class="italic">τ ί</span> ;</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line indent-1"><span class="italic">Ω θεέ, ω Ή λ ι ε</span></span>
-        <span class="verse-line indent-1">— είπεν ο Βασιλεύς με μια φωνή —</span>
-        <span class="verse-line">ένα να ξέρεις,</span>
-        <span class="verse-line">πως <span class="italic">δ ε ν</span> θα ζήσουμε μαζί.</span>
-        <span class="verse-line">Πριν από σένα, <span class="italic">ε γ ώ</span> θα χαιρετήσω·</span>
-        <span class="verse-line">κι εσύ, <span class="italic">π ο λ ύ</span> μετά από μένα.</span>
-        <span class="verse-line">Δεν θα 'μαι στην κηδεία σου,</span>
-        <span class="verse-line">εσύ όμως στην δικιά μου θα 'σαι</span>
-        <span class="verse-line">— κάπως — την κάθοδό μου να φωτίζεις.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Ήλιε του απομεσήμερου,</span>
-        <span class="verse-line">κατάματα σε κοίταξα και σου 'πα:</span>
-        <span class="verse-line indent-2">Απόψε, θα δύσουμε <span class="italic">μ α ζ ί</span>.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line">Ουδένα χάλκεον χέρι φόβου αισθάνομαι,</span>
-        <span class="verse-line">πάρθιον βέλος να στρέφει προς εμέ.</span>
-        <span class="verse-line spacer"></span>
-        <span class="verse-line indent-5">[⋯κι ο Φίλανδρος πριχού τελεία να βάλει,</span>
-        <span class="verse-line indent-5">σφυρί-καλέμι έξαφνα πετά, για να προλάβει:</span>
-        <span class="verse-line indent-5"><span class="italic">Β ι α ζ ό μ α σ τ ε, μ έ γ α Β α σ ι λ έ α, ό χ ι.</span>]</span>
+  <button class="theme-toggle" id="theme-toggle" type="button" hidden
+          aria-pressed="false" aria-label="Ενεργοποίηση σκοτεινού θέματος" title="Σκοτεινό θέμα">
+    <svg class="icon-moon" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M20.5 14.8A8.6 8.6 0 0 1 9.2 3.5a7.1 7.1 0 1 0 11.3 11.3Z"/>
+    </svg>
+    <svg class="icon-sun" viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="4"/>
+      <path d="M12 2.4v2.2M12 19.4v2.2M2.4 12h2.2M19.4 12h2.2M5.2 5.2l1.6 1.6M17.2 17.2l1.6 1.6M18.8 5.2l-1.6 1.6M6.8 17.2l-1.6 1.6"/>
+    </svg>
+  </button>
 
-        <!-- υποσημειώσεις ενσωματωμένες -->
-        <div class="footnote">
-            <sup>1</sup> Ιδρυθείσα κατά την ελληνιστική εποχή, η Κτησιφών ήταν πόλη στην καρδιά της αρχαίας Βαβυλώνας, που για μια ολόκληρη χιλιετία υπήρξε η διάσημη πρωτεύουσα του Παρθικού Βασιλείου των Αρσακιδών και της Περσικής Αυτοκρατορίας των Σασσανιδών. Σήμερα, εντοπίζεται στα 30 χιλιόμετρα ΝΔ της πόλης της Βαγδάτης.
-        </div>
-        <div class="footnote">
-            <sup>2</sup> ο καλός άγγελος του Ζωροαστρισμού
-        </div>
-        <div class="footnote">
-            <sup>3</sup> Ο Μαρδούκ, ή Μερωδάχ ήταν ο ύπατος θεός της Βαβυλώνας προερχόμενος από το πανάρχαιο σουμεριακό πάνθεο.
-        </div>
-        <div class="footnote">
-            <sup>4</sup> ενν. ο Θεμιστοκλής
-        </div>
-        <div class="footnote">
-            <sup>5</sup> Η φράση «οὐαὶ τοῖς ἡττημένοις», (στη νεοελληνική: αλίμονο στους νικημένους), είναι μια ιστορική λατινογενής φράση που, κατά τον Τίτο Λίβιο (V, 48), λέχθηκε το 390 π.Χ. από τον αρχηγό των Γαλατών Βρέννο, τη στιγμή που, μετά από αντιρρήσεις των Ρωμαίων για το σωστό βάρος χρυσού που θα καταβαλλόταν ως λύτρα για την αποχώρηση των Γαλατών από τη Ρώμη, έριξε το ξίφος και τη ζώνη του πάνω στη ζυγαριά των δικών του σταθμών, αναφωνώντας <strong>Vae victis</strong>.
-        </div>
+  <header class="masthead">
+    <p class="author">Ζώης Ξένος</p>
+    <h1>ΗΤΤΗΜΕΝΟΣ ΥΜΗΤΤΟΣ</h1>
+    <p class="subhead">[Προς τι ο θρήνος και ο κοπετός;]</p>
+
+    <svg class="rule-orn" viewBox="0 0 160 14" aria-hidden="true" focusable="false">
+      <path d="M0 7h56M104 7h56" stroke="currentColor" stroke-width="0.8" fill="none"/>
+      <path d="M80 1.5 85.5 7 80 12.5 74.5 7Z" stroke="currentColor" stroke-width="0.8" fill="none"/>
+      <circle cx="66" cy="7" r="1.3" fill="currentColor"/>
+      <circle cx="94" cy="7" r="1.3" fill="currentColor"/>
+    </svg>
+  </header>
+
+  <article class="poem">
+
+    <p class="stanza">
+      <span class="line">Το σάλπισμα μιας άνευ προηγουμένου</span>
+      <span class="line" style="--i:1">ατάκτου υποχωρήσεως</span>
+      <span class="line">του τελευταίου των Αρσακιδών,</span>
+      <span class="line" style="--i:1">Αρτάβανου — και της καθεστηκυίας δυναστείας του —</span>
+      <span class="line">απάρεσκα καλείται να αποκρύψει εις το χρονικόν του</span>
+      <span class="line">ο ελληνίζων γραφεύς βήτα Φίλανδρος,</span>
+      <span class="line">μέλος της ολιγομελούς</span>
+      <span class="line">μετά του μεγάλου Βασιλέως κουστωδίας</span>
+      <span class="line" style="--i:2">— σασσανιδικώς ενδεδυμένης</span>
+      <span class="line" style="--i:2">για την «κάλυψη-απόκρυψη», αντιλαμβάνεσθε —</span>
+      <span class="line">που άρον-άρον απεσπάσθη</span>
+      <span class="line">από τον κύριον όγκον του στρατεύματος,</span>
+      <span class="line">απάνω σε ντουζίνα λιμασμένες βακτριανές.</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Όντες απληροφόρητοι προς ώρας</span>
+      <span class="line">οι Ρωμαίοι αγγελιοφόροι</span>
+      <span class="line">περί της παρθικής ανταρσίας,</span>
+      <span class="line">εξόν νωπές είναι ακόμα</span>
+      <span class="line">οι θύμησες της συντριβής</span>
+      <span class="line">των λεγεώνων υπό της Περσίας,</span>
+      <span class="line">τοσαύτη η κατισχυμένη ακολουθία</span>
+      <span class="line" style="--i:2">— αντί της Κτησιφώντος<sup class="fn"><a href="#fn1" id="ref1" aria-label="Υποσημείωση 1">1</a></sup> —</span>
+      <span class="line">βαίνει παραδόξως προς δυσμάς,</span>
+      <span class="line">αιτούσα ασύλου από την βαθμηδόν</span>
+      <span class="line">σκαιοτέραν κτήσιν του Αλεξάνδρου,</span>
+      <span class="line">του τελευταίου [και καταϊδρωμένου] των Σεβήρων,</span>
+      <span class="line">Πόλιν των Αθηνών.</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Με χωλόν βηματισμόν ο Βασιλεύς</span>
+      <span class="line">αρνείται την εθιμοτυπικήν πορείαν</span>
+      <span class="line">προς όρος Αιγάλεω,</span>
+      <span class="line">προστάζων δε την εκτροπήν αύτης προς Υμηττόν,</span>
+      <span class="line">εμβρόντητους αφήνων</span>
+      <span class="line">τους της πομπής μετέχοντας.</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Από ψηλά, τα σπίτια του αρχέγονου εχθρού</span>
+      <span class="line">θυμίζουν μαυσωλείο, με τάφους περιωπής·</span>
+      <span class="line">μια περιουσία θρυλική,</span>
+      <span class="line">που λόγω αλλεπάλληλων</span>
+      <span class="line">φόρων κληρονομίας,</span>
+      <span class="line">με νύχια και με δόντια συγκρατιέται.</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Με ρέμβη στα μάτια</span>
+      <span class="line" style="--i:1">[που σε λίγο θα πλυθούν]</span>
+      <span class="line">και με δεήσεις ακατάληπτες</span>
+      <span class="line">προς τον Φαρβαχάρ<sup class="fn"><a href="#fn2" id="ref2" aria-label="Υποσημείωση 2">2</a></sup> και τον Ναμπού</span>
+      <span class="line" style="--i:2">[τον ξεχασμένο γιό του Μαρδούκ<sup class="fn"><a href="#fn3" id="ref3" aria-label="Υποσημείωση 3">3</a></sup>]</span>
+      <span class="line">ο νους του ηττημένου <em class="track">ανεμοπορεί</em>·</span>
+      <span class="line">γίνεται έξαφνα μάρτυρας σεισμού,</span>
+      <span class="line">μιας πόλης που τρεκλίζει.</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Ανήμπορος ο Αρτάβανος</span>
+      <span class="line">να σώσει το άστυ (το κλεινόν) απ' το κακό,</span>
+      <span class="line">μα μόνο το τομάρι του —</span>
+      <span class="line" style="--i:3">άραγε, για πόσο ακόμα;</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Μια νέα Σαλαμίνα ζει,</span>
+      <span class="line">μια θαλερή πνοή αποζητεί·</span>
+      <span class="line">να λυτρωθεί στα έσχατα, ευελπιστεί.</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Από της Ναυμαχίας</span>
+      <span class="line">τα στοιχημένα καταστρώματα,</span>
+      <span class="line">η επωδός μιας θρηνωδίας</span>
+      <span class="line">ακόμα αντηχεί·</span>
+      <span class="line">του πόνου οι ιαχές και του θυμού</span>
+      <span class="line" style="--i:2">κύμβαλα βουβά</span>
+      <span class="line" style="--i:4">της Ήττας διατρυπούν.</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Στρέφει το βλέμμα προς το θρόνο, το Αιγάλεω·</span>
+      <span class="line">τιμά τον Ξέρξη τον προκάτοχο,</span>
+      <span class="line">τον χαιρετά στρατιωτικά</span>
+      <span class="line">και στην συνέχεια επιστρατεύει</span>
+      <span class="line">τα σπαστά του ελληνικά.</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Το νόθο γιό μιας σκλάβας συναντά·</span>
+      <span class="line">ναι, καλά θυμάστε,</span>
+      <span class="line">αυτόν που σκάρωσε το Τέχνασμα<sup class="fn"><a href="#fn4" id="ref4" aria-label="Υποσημείωση 4">4</a></sup></span>
+      <span class="line">και ύστερα αυτομόλησε.</span>
+      <span class="line">Να τον ρωτά:</span>
+      <span class="line" style="--i:2"><em>Σκλάβος εγώ, σκλάβος εσύ.</em></span>
+      <span class="line" style="--i:2"><em>Ποιον πόνο να αντέξω;</em></span>
+      <span class="line" style="--i:4"><em>Στο σώμα, στην ψυχή;</em></span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Απόκριση καθάρια</span>
+      <span class="line">δεν επήρε, μονάχα ένα ξερό:</span>
+      <span class="line" style="--i:3">«<em>ουαί τοις ηττημένοις</em><sup class="fn"><a href="#fn5" id="ref5" aria-label="Υποσημείωση 5">5</a></sup> και νεκροίς».</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Ποιος το περίμενε·</span>
+      <span class="line">οι Πάρθες, Αθηναίοι σε μια μέρα!</span>
+      <span class="line">Να τοι, με κομμένη</span>
+      <span class="line">αλεξανδρίζουσα περπατησιά,</span>
+      <span class="line">πιάνουν το γόνυ σας,</span>
+      <span class="line">ω άνδρες Αθηναίοι-παρηκμασμένοι.</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Οι Πάρθες...</span>
+      <span class="line">Τί κι αν τα δώρα των Σελευκιδών τιμήσαν;</span>
+      <span class="line">Τί κι αν κοτζάμ Ρωμαίους σταματήσαν;</span>
+      <span class="line">Το σέβας ολονών, λειψό το πήραν·</span>
+      <span class="line">μα πάντοτ' είχαν αναπεπταμένα</span>
+      <span class="line">τα αυτοκρατορικά τους λάβαρα,</span>
+      <span class="line">όσες φορές κι αν σκλαβωθήκαν,</span>
+      <span class="line">με αντάλλαγμα, όμως, <em class="track">τι</em>;</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line" style="--i:1"><em>Ω θεέ, ω <span class="track">Ήλιε</span></em></span>
+      <span class="line" style="--i:1">— είπεν ο Βασιλεύς με μια φωνή —</span>
+      <span class="line">ένα να ξέρεις,</span>
+      <span class="line">πως <em class="track">δεν</em> θα ζήσουμε μαζί.</span>
+      <span class="line">Πριν από σένα, <em class="track">εγώ</em> θα χαιρετήσω·</span>
+      <span class="line">κι εσύ, <em class="track">πολύ</em> μετά από μένα.</span>
+      <span class="line">Δεν θα 'μαι στην κηδεία σου,</span>
+      <span class="line">εσύ όμως στην δικιά μου θα 'σαι</span>
+      <span class="line">— κάπως — την κάθοδό μου να φωτίζεις.</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Ήλιε του απομεσήμερου,</span>
+      <span class="line">κατάματα σε κοίταξα και σου 'πα:</span>
+      <span class="line" style="--i:2">Απόψε, θα δύσουμε <em class="track">μαζί</em>.</span>
+    </p>
+
+    <p class="stanza">
+      <span class="line">Ουδένα χάλκεον χέρι φόβου αισθάνομαι,</span>
+      <span class="line">πάρθιον βέλος να στρέφει προς εμέ.</span>
+    </p>
+
+    <div class="coda">
+      <span class="line">[⋯κι ο Φίλανδρος πριχού τελεία να βάλει,</span>
+      <span class="line">σφυρί-καλέμι έξαφνα πετά, για να προλάβει:</span>
+      <span class="line"><em class="track">Βιαζόμαστε, μέγα Βασιλέα, όχι.</em>]</span>
     </div>
 
-    <div class="bio">
-        <h2>Σύντομο βιογραφικό σημείωμα</h2>
-        <p>Με καταγωγή από την Θεσσαλονίκη, ο Ζώης Ξένος μένει στην Αθήνα για χρόνια ουκ έστιν αριθμός. Δηλώνει αταξινόμητος <i>sui generis</i>, μέρος του πρώτου κύματος των millennials. Όταν συντρέχουν αφορμές και συγκυρίες έμπνευσης, ακολουθεί αυτοθέλητα κύματα και ρεύματα, υπόγεια και μη, ποτέ όμως κατά πόδας. Έχει εκδώσει μία ποιητική συλλογή («Τανγκανίκα — Πενήντα και ένα ποιήματα για τον πατέρα μου», Εκδ. Οδός Πανός), ενώ κείμενα και κριτικές του βρίσκονται αναρτημένες στο διαδίκτυο.</p>
-        <div class="sig">— Ζ.Ξ.</div>
-    </div>
+  </article>
 
-    <div style="margin-top: 2rem; font-size: 0.85rem; color: #6b5f55; border-top: 1px solid #ddd6cc; padding-top: 0.8rem; text-align: center;">
-        <span class="small-caps">© ΖΩΗΣ ΞΕΝΟΣ</span> · 24/7/2026 · Προσωπικό ιστολόγιο
-    </div>
+  <aside class="notes" aria-labelledby="notes-title">
+    <h2 class="notes-title" id="notes-title">Υποσημειώσεις</h2>
+    <ol class="notes-list">
+      <li id="fn1"><span class="num">1</span> Ιδρυθείσα κατά την ελληνιστική εποχή, η Κτησιφών ήταν πόλη στην καρδιά της αρχαίας Βαβυλώνας, που για μια ολόκληρη χιλιετία υπήρξε η διάσημη πρωτεύουσα του Παρθικού Βασιλείου των Αρσακιδών και της Περσικής Αυτοκρατορίας των Σασσανιδών. Σήμερα, εντοπίζεται στα 30 χιλιόμετρα ΝΔ της πόλης της Βαγδάτης. <a class="back" href="#ref1" aria-label="Επιστροφή στο κείμενο">↩</a></li>
+      <li id="fn2"><span class="num">2</span> ο καλός άγγελος του Ζωροαστρισμού <a class="back" href="#ref2" aria-label="Επιστροφή στο κείμενο">↩</a></li>
+      <li id="fn3"><span class="num">3</span> Ο Μαρδούκ, ή Μερωδάχ ήταν ο ύπατος θεός της Βαβυλώνας προερχόμενος από το πανάρχαιο σουμεριακό πάνθεο. <a class="back" href="#ref3" aria-label="Επιστροφή στο κείμενο">↩</a></li>
+      <li id="fn4"><span class="num">4</span> ενν. ο Θεμιστοκλής <a class="back" href="#ref4" aria-label="Επιστροφή στο κείμενο">↩</a></li>
+      <li id="fn5"><span class="num">5</span> Η φράση «οὐαὶ τοῖς ἡττημένοις», (στη νεοελληνική: αλίμονο στους νικημένους), είναι μια ιστορική λατινογενής φράση που, κατά τον Τίτο Λίβιο (V, 48), λέχθηκε το 390 π.Χ. από τον αρχηγό των Γαλατών Βρέννο, τη στιγμή που, μετά από αντιρρήσεις των Ρωμαίων για το σωστό βάρος χρυσού που θα καταβαλλόταν ως λύτρα για την αποχώρηση των Γαλατών από τη Ρώμη, έριξε το ξίφος και τη ζώνη του πάνω στη ζυγαριά των δικών του σταθμών, αναφωνώντας <strong lang="la">Vae victis</strong>. <a class="back" href="#ref5" aria-label="Επιστροφή στο κείμενο">↩</a></li>
+    </ol>
+  </aside>
+
+  <aside class="bio" aria-labelledby="bio-title">
+    <p class="kicker">Σημείωμα</p>
+    <h2 id="bio-title">Σύντομο βιογραφικό σημείωμα</h2>
+    <p>Με καταγωγή από την Θεσσαλονίκη, ο Ζώης Ξένος μένει στην Αθήνα για χρόνια ουκ έστιν αριθμός. Δηλώνει αταξινόμητος <em lang="la">sui generis</em>, μέρος του πρώτου κύματος των <span lang="en">millennials</span>. Όταν συντρέχουν αφορμές και συγκυρίες έμπνευσης, ακολουθεί αυτοθέλητα κύματα και ρεύματα, υπόγεια και μη, ποτέ όμως κατά πόδας. Έχει εκδώσει μία ποιητική συλλογή (<cite>Τανγκανίκα — Πενήντα και ένα ποιήματα για τον πατέρα μου</cite>, Εκδ. Οδός Πανός), ενώ κείμενα και κριτικές του βρίσκονται αναρτημένες στο διαδίκτυο.</p>
+    <p class="sig">— Ζ.Ξ.</p>
+  </aside>
+
+  <footer class="colophon">
+    <span class="small-caps">© ΖΩΗΣ ΞΕΝΟΣ</span> · 24/7/2026 · Προσωπικό ιστολόγιο
+  </footer>
+
+</main>
+
+<script>
+  /* Διακόπτης φωτεινού / σκοτεινού θέματος */
+  (function () {
+    var root = document.documentElement;
+    var btn = document.getElementById('theme-toggle');
+    if (!btn) return;
+
+    function render() {
+      var dark = root.getAttribute('data-theme') === 'dark';
+      btn.hidden = false;
+      btn.setAttribute('aria-pressed', dark ? 'true' : 'false');
+      btn.setAttribute('aria-label', dark ? 'Ενεργοποίηση φωτεινού θέματος' : 'Ενεργοποίηση σκοτεινού θέματος');
+      btn.title = dark ? 'Φωτεινό θέμα' : 'Σκοτεινό θέμα';
+    }
+
+    btn.addEventListener('click', function () {
+      var dark = root.getAttribute('data-theme') !== 'dark';
+      root.setAttribute('data-theme', dark ? 'dark' : 'light');
+      root.style.colorScheme = dark ? 'dark' : 'light';
+      try { localStorage.setItem('theme', dark ? 'dark' : 'light'); } catch (e) {}
+      render();
+    });
+
+    render();
+  })();
+</script>
+
 </body>
 </html>
